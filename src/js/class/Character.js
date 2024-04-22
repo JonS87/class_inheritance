@@ -1,11 +1,12 @@
 export class Character {
   constructor(name, type) {
+    const types = ['Bowerman', 'Daemon', 'Magician', 'Swordsman', 'Undead', 'Zombie'];
     if (name.length >= 2 && name.length <= 10) {
       this.name = name;
     } else {
       throw new Error('Некорректная длина имени');
     }
-    if (['Bowerman', 'Daemon', 'Magician', 'Swordsman', 'Undead', 'Zombie'].indexOf(type) >= 0) {
+    if (types.indexOf(type) >= 0) {
       this.type = type;
     } else {
       throw new Error('Некорректный тип');
